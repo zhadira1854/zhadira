@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Erke</title>
+    <title>Erke_brend_kz</title>
+    <link rel="icon" type="image/x-icon" href="erke.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -10,6 +11,10 @@
 
 
 <body>
+<script>
+    let audio = new Audio("erke1.mp3");
+    audio.play();
+</script>
 <div class="container pt-5 my-5 border bg-primary text-center">
     <h1 class="display-2">Erke</h1>
     <p class="text-danger"><kbd>made in Kazakhstan</kbd></p>
@@ -23,10 +28,10 @@
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="Erke1.html">shop</a>
+                    <a class="nav-link" href="Erke1.html">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Erke2.html">about us</a>
+                    <a class="nav-link" href="Erke2.html">About Us</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -65,7 +70,7 @@
 
     <!-- left and right controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
+        <span class=" carousel-control-prev-icon"></span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
@@ -83,13 +88,23 @@
 </div>
 
 <div class="container mt-3">
-    <ul class="pagination justify-content-end">
+    <ul id="test" class="pagination justify-content-end">
         <li class="page-item disabled"><a class="page-link" href="#">Previous page</a></li>
         <li class="page-item"><a class="page-link" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="Erke1.html">2</a></li>
         <li class="page-item"><a class="page-link" href="Erke2.html">3</a></li>
         <li class="page-item"><a class="page-link" href="Erke1.html">Next page</a></li>
     </ul>
+    <script>
+        let test = document.getElementById("test");
+        test.addEventListener("mouseover", function( event ) {
+            event.target.style.color = "black";
+
+            setTimeout(function() {
+                event.target.style.color = "";
+            },500);
+        }, false);
+    </script>
 </div>
 
 </body>
